@@ -175,7 +175,7 @@ account:
   basic functionality is supported without any need for further programming.
 
 
-5. Licencing
+5. Licensing
 
 ORE will be made available under the LGPL.
 
