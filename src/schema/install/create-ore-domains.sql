@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: create-ore-sequences.sql,v 1.3 2004/12/20 22:58:07 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: create-ore-domains.sql,v 1.1 2004/12/20 22:58:07 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -16,13 +16,8 @@
 -- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 -- 
 -- ((autolicense)) 
-
--- Sequences.
-CREATE SEQUENCE account_id_seq;
-CREATE SEQUENCE product_id_seq;
-CREATE SEQUENCE service_id_seq;
-CREATE SEQUENCE type_id_seq;
-CREATE SEQUENCE parameter_id_seq;
-CREATE SEQUENCE product_subscription_id_seq;
-CREATE SEQUENCE service_subscription_id_seq;
-CREATE SEQUENCE parameter_value_id_seq;
+CREATE DOMAIN ore_id BIGINT;
+CREATE DOMAIN ore_timestamp TIMESTAMP WITH TIME ZONE;
+CREATE DOMAIN ore_name VARCHAR(32);
+CREATE DOMAIN ore_display_name TEXT;
+CREATE DOMAIN ore_description TEXT;

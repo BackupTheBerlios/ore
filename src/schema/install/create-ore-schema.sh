@@ -1,5 +1,5 @@
 #!/bin/sh
-# ORE/Open Rating Environment - $Id: create-ore-schema.sh,v 1.1 2004/12/20 20:04:57 skandalfo Exp $
+# ORE/Open Rating Environment - $Id: create-ore-schema.sh,v 1.2 2004/12/20 22:58:07 skandalfo Exp $
 # Copyright (C) 2004 Juan J. Garcia de Soria.
 # 
 # This program is free software; you can redistribute it and/or
@@ -19,6 +19,7 @@
 # ((autolicense)) 
 psql template1 postgres -f create-ore-user.sql
 psql template1 postgres -f create-ore-database.sql
+psql ore ore -f create-ore-domains.sql
 psql ore ore -f create-ore-tables.sql
 psql ore ore -f create-ore-sequences.sql
 

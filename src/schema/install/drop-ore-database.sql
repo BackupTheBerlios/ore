@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: drop-ore-database.sql,v 1.2 2004/12/20 19:55:47 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: drop-ore-database.sql,v 1.3 2004/12/20 22:58:07 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or

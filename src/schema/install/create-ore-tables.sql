@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: create-ore-tables.sql,v 1.3 2004/12/20 20:41:28 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: create-ore-tables.sql,v 1.4 2004/12/20 22:58:07 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -18,51 +18,51 @@
 -- ((autolicense)) 
 
 CREATE TABLE account (
-	id			BIGINT NOT NULL,
-	creation_date		TIMESTAMP WITH TIME ZONE NOT NULL,
-	deletion_date		TIMESTAMP WITH TIME ZONE,
+	id			ore_id NOT NULL,
+	creation_date		ore_timestamp NOT NULL,
+	deletion_date		ore_timestamp,
 	PRIMARY KEY(id)
 );
 
 CREATE TABLE product (
-	id			BIGINT NOT NULL,
-	parent_id		BIGINT REFERENCES product(id),
-	platform_name		TEXT NOT NULL,
-	display_name		TEXT NOT NULL,
-	description		TEXT NOT NULL,
-	availability_date	TIMESTAMP WITH TIME ZONE,
+	id			ore_id NOT NULL,
+	parent_id		ore_id REFERENCES product(id),
+	platform_name		ore_name NOT NULL,
+	display_name		ore_display_name NOT NULL,
+	description		ore_description NOT NULL,
+	availability_date	ore_timestamp,
 	PRIMARY KEY(id)
 );
 
 CREATE TABLE service (
-	id			BIGINT NOT NULL,
-	parent_id		BIGINT REFERENCES service(id),
-	platform_name		TEXT NOT NULL,
-	display_name		TEXT NOT NULL,
-	description		TEXT NOT NULL,
-	availability_date	TIMESTAMP WITH TIME ZONE,
+	id			ore_id NOT NULL,
+	parent_id		ore_id REFERENCES service(id),
+	platform_name		ore_name NOT NULL,
+	display_name		ore_display_name NOT NULL,
+	description		ore_description NOT NULL,
+	availability_date	ore_timestamp,
 	PRIMARY KEY(id)
 );
 
 CREATE TABLE product_has_service (
-	product_id		BIGINT NOT NULL REFERENCES product(id),
-	service_id		BIGINT NOT NULL REFERENCES service(id),
+	product_id		ore_id NOT NULL REFERENCES product(id),
+	service_id		ore_id NOT NULL REFERENCES service(id),
 	PRIMARY KEY(product_id, service_id)
 );
 
 CREATE TABLE product_subscription (
-	id			BIGINT NOT NULL,
-	product_id		BIGINT NOT NULL REFERENCES product(id),
-	account_id		BIGINT NOT NULL REFERENCES account(id),
-	subscription_date	TIMESTAMP WITH TIME ZONE,
-	termination_date	TIMESTAMP WITH TIME ZONE,
+	id			ore_id NOT NULL,
+	product_id		ore_id NOT NULL REFERENCES product(id),
+	account_id		ore_id NOT NULL REFERENCES account(id),
+	subscription_date	ore_timestamp,
+	termination_date	ore_timestamp,
 	PRIMARY KEY(id)
 );
 
 CREATE TABLE service_subscription (
-	id			BIGINT NOT NULL,
-	service_id		BIGINT NOT NULL REFERENCES service(id),
-	product_subscription_id	BIGINT NOT NULL	REFERENCES product_subscription(id),
+	id			ore_id NOT NULL,
+	service_id		ore_id NOT NULL REFERENCES service(id),
+	product_subscription_id	ore_id NOT NULL	REFERENCES product_subscription(id),
 	PRIMARY KEY(id)
 );
 
