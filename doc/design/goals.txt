@@ -1,5 +1,9 @@
 ORE Goals
 
+Juan J. García de Soria
+
+$Id: goals.txt,v 1.4 2004/12/01 14:46:54 skandalfo Exp $
+
 1 Introduction
 
 We're observing, in our experience at work in big 
