@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: create-ore-user.sql,v 1.2 2004/12/20 19:55:47 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: create-ore-tables.sql,v 1.1 2004/12/20 19:55:47 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -16,5 +16,10 @@
 -- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 -- 
 -- ((autolicense)) 
-CREATE USER ore WITH PASSWORD 'ore';
+CREATE TABLE account (
+	id		BIGINT NOT NULL,
+	creation_date	TIMESTAMP WITH TIME ZONE NOT NULL,
+	deletion_date	TIMESTAMP WITH TIME ZONE
+	PRIMARY KEY(id)
+);
 
