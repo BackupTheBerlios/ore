@@ -99,6 +99,21 @@
   \newpage
   \null
   \vskip 2em%
+  \begin{flushright}%
+    \begin{tabular}[t]{@{} r c @{}}
+    \raisebox{2em}{\parbox{0.6\textwidth}{
+    \begin{flushright}%
+    {\LARGE ORE}\par%
+    {\large Open Rating Environment}
+    \end{flushright}
+    }}
+    & 
+    \includegraphics[width=0.1\textwidth]{../logo/ore.eps} \\ 
+    \end{tabular}
+    \vskip 0.5em%
+    {\tiny \@date \par}%       % Set date in \large size.
+    \vskip 1.0em%
+  \end{flushright}\par
   \begin{center}%
   \let \footnote \thanks
     {\LARGE \@title \par}%
@@ -108,8 +123,7 @@
       \begin{tabular}[t]{c}%
         \@author
       \end{tabular}\par}%
-    \vskip 1em%
-    {\large \@date}%
+    \vskip 1.5em%
   \end{center}%
   \par
   \vskip 1.5em}
