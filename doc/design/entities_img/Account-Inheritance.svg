@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   id="svg1"
+   sodipodi:version="0.32"
+   inkscape:version="0.39"
+   width="210mm"
+   height="297mm"
+   sodipodi:docbase="/home/skandalfo/ore/doc/design/entities_img"
+   sodipodi:docname="Account-Inheritance.svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:xml="http://www.w3.org/XML/1998/namespace"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs
+     id="defs3">
+    <marker
+       style="overflow:visible;"
+       id="TriangleOutM"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM">
+      <path
+         transform="scale(0.4)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path1595"
+         sodipodi:nodetypes="cccc" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1L"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1L">
+      <path
+         transform="scale(0.8)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1649"
+         sodipodi:nodetypes="ccccc" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.63547513"
+     inkscape:cx="297.63780"
+     inkscape:cy="420.94487"
+     inkscape:window-width="1022"
+     inkscape:window-height="697"
+     inkscape:window-x="0"
+     inkscape:window-y="25" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF
+       id="RDF5">
+      <cc:Work
+         rdf:about=""
+         id="Work6">
+        <dc:format
+           id="format7">image/svg+xml</dc:format>
+        <dc:type
+           id="type9"
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g1687"
+     transform="translate(16.99769,202.0653)">
+    <g
+       id="g1667">
+      <rect
+         style="fill:#d3d8ff;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:1.1039567pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;"
+         id="rect908"
+         width="273.77441"
+         height="115.27787"
+         x="103.86946"
+         y="162.65358" />
+      <text
+         xml:space="preserve"
+         style="font-size:16.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Sans;text-anchor:start;writing-mode:lr;"
+         x="112.54796"
+         y="182.51479"
+         id="text1530"
+         sodipodi:linespacing="100%"><tspan
+           id="tspan1531">Account 1</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:12.000000;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:helvetica;"
+         x="145.70161"
+         y="216.54092"
+         id="text1535"><tspan
+           id="tspan1536">Parent=None</tspan><tspan
+           sodipodi:role="line"
+           id="tspan940"
+           x="145.70161"
+           y="228.54092">Contract No=12345678</tspan><tspan
+           sodipodi:role="line"
+           id="tspan1538"
+           x="145.70161"
+           y="240.54092"></tspan></text>
+    </g>
+    <g
+       id="g1677">
+      <rect
+         style="fill:#d3d8ff;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:1.1039567pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;"
+         id="rect1540"
+         width="273.77441"
+         height="115.27787"
+         x="332.45523"
+         y="370.30020" />
+      <text
+         xml:space="preserve"
+         style="font-size:16.000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Sans;text-anchor:start;writing-mode:lr;"
+         x="341.13373"
+         y="390.16141"
+         id="text1541"
+         sodipodi:linespacing="100%"><tspan
+           id="tspan1542">Account 2</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:12.000000;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:helvetica;"
+         x="374.28738"
+         y="424.18756"
+         id="text1544"><tspan
+           id="tspan1545">Parent=Account 1</tspan><tspan
+           sodipodi:role="line"
+           id="tspan942"
+           x="374.28738"
+           y="436.18756">Contract No=12345678 (inherited)</tspan><tspan
+           sodipodi:role="line"
+           id="tspan1550"
+           x="374.28738"
+           y="448.18756">Self Care Login=&quot;user2@selfcare&quot;</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#000000;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;marker-start:none;marker-end:url(#TriangleOutM);"
+       d="M 317.57718,277.98321 L 444.21025,370.11658"
+       id="path1549"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:12.000000;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:helvetica;"
+       x="280.11264"
+       y="293.07211"
+       id="text1661"><tspan
+         id="tspan1662">Parent</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.000000;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:helvetica;"
+       x="446.47394"
+       y="364.87766"
+       id="text1664"><tspan
+         id="tspan1665">Child</tspan></text>
+  </g>
+</svg>
