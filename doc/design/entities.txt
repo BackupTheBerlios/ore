@@ -1,0 +1,90 @@
+ORE/Open Rating Environment.
+
+Database model and data entities.
+
+
+1. Database model concepts
+
+The database model for ORE will have to deal with the following kinds of data:
+
+- User/Customer Accounts and related Subscriptions.
+
+- Product/Service/Package/Catalog definitions.
+
+- Parameter Definitions and Values.
+
+- Event Types and Rated Event Records.
+
+- Invoices.
+
+- Business procedures:
+
+  - Event guidance procedures.
+
+  - Event rating procedures.
+
+  - Subscription modifier procedures.
+
+  - Billing modifier procedures.
+
+
+2.1. User/Customer Accounts
+
+An Account will be the entity to represent a single customer or user in the
+service platform. Actually it represents a single billable entity, although it
+is not a monetary-only concept, since it could refer to several currencies at
+the same time, and will usually contain associated contact data.
+
+That said, a single account will typically contain data for the following
+kinds of informations:
+
+- Default, secondary currencies.
+
+- Currency balances.
+
+- Billing period and date information.
+
+- Account status (active/blocked/deleted...).
+
+- Commercial model information determining the Products available for the
+  Account.
+
+- Contact data, like:
+
+  - Personal data (Name, surname...).
+
+  - Address.
+
+  - Phone number(s).
+
+  - E-mail address(es).
+
+- Additional parameter values as needed for the specific deployment.
+
+Each independent field or parameter value may be optional depending on
+specific deployment needs.
+
+
+2.2. Product, Service, Package and Catalog information
+
+A Service is the definition of a kind of service that may be provided to a
+customer or user.
+
+A Service definition may define specific Parameters that determine specific
+characteristics of the Service. For instance, for a basic phone Service, the
+phone number for the subscriber line would be a Parameter to be defined.
+
+Services may be subclassed. Each Service may be a root Service, so that it has
+no parent Service, or may inherit from exactly one parent Service. When a
+Service inherits from a parent Service, it inherits all the Parameter defined
+for its parent, as well as any Parameter inherited by its parent Service.
+
+Each root Service defines an Event Type (a definition for the data that
+defines each Service usage) that is inherited and cannot be modified by child
+Services.
+
+Each Service may assign Values for the Parameters that itself defines, or for
+any Parameter inherited from it's parent Service, if any. If a Service doesn't
+define a Value for a Parameter, it inherits the any Value that may be defined
+or inherited by its parent Service, if any.
+
