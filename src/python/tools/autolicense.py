@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# ORE/Open Rating Environment - $Id: autolicense.py,v 1.3 2004/12/20 19:41:38 skandalfo Exp $
+# ORE/Open Rating Environment - $Id: autolicense.py,v 1.4 2004/12/20 20:48:36 skandalfo Exp $
 # Copyright (C) 2004 Juan J. Garcia de Soria.
 # 
 # This program is free software; you can redistribute it and/or
@@ -44,24 +44,32 @@ license = [
 preComment = {
 	".c": "/*",
 	".cpp": "/*",
-	".java": "/*"
+	".java": "/*",
+	".svg": "<!--",
+	".xml": "<!--",
 }
 
 postComment = {
 	".c": "*/",
 	".cpp": "*/",
-	".java": "*/"
+	".java": "*/",
+	".svg": "-->",
+	".xml": "-->",
 }
 
 ignoreComment = {
 	".sh": "#!",
-	".py": "#!"
+	".py": "#!",
+	".lyx": "#LyX",
+	".svg": "<?",
+	".xml": "<?",
 }
 	
 lineComment = {
 	".sql": "-- ",
 	".py": "# ",
-	".sh": "# "
+	".sh": "# ",
+	".lyx": "# ",
 }
 
 def licensify(file):
