@@ -3,7 +3,7 @@
 \textclass orebook
 \language english
 \inputencoding auto
-\fontscheme default
+\fontscheme palatino
 \graphics default
 \paperfontsize 10
 \spacing single 
@@ -33,7 +33,7 @@ Juan J.
  García de Soria
 \layout Date
 
-$Id: entities.lyx,v 1.6 2004/12/02 20:11:40 skandalfo Exp $
+$Id: entities.lyx,v 1.7 2004/12/04 10:28:20 skandalfo Exp $
 \layout Standard
 
 
