@@ -1,5 +1,5 @@
 #!/bin/sh
-# ORE/Open Rating Environment - $Id: create-ore-schema.sh,v 1.3 2004/12/21 10:17:51 skandalfo Exp $
+# ORE/Open Rating Environment - $Id: create-ore-schema.sh,v 1.4 2004/12/21 12:17:38 skandalfo Exp $
 # Copyright (C) 2004 Juan J. Garcia de Soria.
 # 
 # This program is free software; you can redistribute it and/or
@@ -23,4 +23,5 @@ psql ore ore -f create-ore-domains.sql
 psql ore ore -f create-ore-sequences.sql
 psql ore ore -f create-ore-tables.sql
 psql ore ore -f create-ore-indexes.sql
+psql ore ore -f insert-ore-values.sql
 

@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: create-ore-indexes.sql,v 1.1 2004/12/21 11:39:58 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: create-ore-indexes.sql,v 1.2 2004/12/21 12:17:38 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -17,24 +17,22 @@
 -- 
 -- ((autolicense)) 
 CREATE INDEX catalog_parent_id_idx ON catalog(parent_id);
-CREATE INDEX catalog_platform_name_idx ON catalog(platform_name);
 
 CREATE INDEX account_parent_id_idx ON account(parent_id);
 CREATE INDEX account_creation_date_idx ON account(creation_date);
 CREATE INDEX account_deletion_date_idx ON account(deletion_date);
 
 CREATE INDEX product_parent_id_idx ON product(parent_id);
-CREATE INDEX product_platform_name_idx ON product(platform_name);
 
 CREATE INDEX service_parent_id_idx ON service(parent_id);
-CREATE INDEX service_platform_name_idx ON service(platform_name);
 
 CREATE INDEX product_subscription_product_id_idx ON product_subscription(product_id);
 CREATE INDEX product_subscription_account_id_idx ON product_subscription(account_id);
-
 CREATE INDEX product_subscription_subscription_date_idx ON product_subscription(subscription_date);
 CREATE INDEX product_subscription_termination_date_idx ON product_subscription(termination_date);
 
 CREATE INDEX service_subscription_service_id_idx ON service_subscription(service_id);
 CREATE INDEX service_subscription_product_subscription_id_idx ON service_subscription(product_subscription_id);
 
+CREATE INDEX parameter_defining_place_idx ON parameter(defining_level, defining_entity);
+CREATE INDEX parameter_data_type_id_idx ON parameter(data_type_id);

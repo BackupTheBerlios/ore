@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: create-ore-domains.sql,v 1.2 2004/12/21 11:39:58 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: create-ore-domains.sql,v 1.3 2004/12/21 12:17:38 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -23,6 +23,7 @@ CREATE DOMAIN ore_timestamp TIMESTAMP WITH TIME ZONE;
 CREATE DOMAIN ore_name VARCHAR(32);
 CREATE DOMAIN ore_display_name TEXT;
 CREATE DOMAIN ore_description TEXT;
+CREATE DOMAIN ore_boolean BOOLEAN;
 
 -- Enumeration domains.
 CREATE DOMAIN ore_definition_level INTEGER CHECK (

@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: create-ore-tables.sql,v 1.6 2004/12/21 11:39:58 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: create-ore-tables.sql,v 1.7 2004/12/21 12:17:38 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -33,7 +33,7 @@ CREATE TABLE account (
 	parent_id		ore_id REFERENCES account(id),
 	creation_date		ore_timestamp NOT NULL,
 	deletion_date		ore_timestamp,
-	catalog_id		ore_id,
+	catalog_id		ore_id REFERENCES catalog(id),
 	PRIMARY KEY(id)
 );
 
@@ -78,6 +78,29 @@ CREATE TABLE service_subscription (
 	id			ore_id NOT NULL DEFAULT NEXTVAL('service_subscription_id_seq'),
 	service_id		ore_id NOT NULL REFERENCES service(id),
 	product_subscription_id	ore_id NOT NULL	REFERENCES product_subscription(id),
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE data_type (
+	id			ore_id NOT NULL DEFAULT NEXTVAL('data_type_id_seq'),
+	platform_name		ore_name NOT NULL UNIQUE,
+	display_name		ore_display_name NOT NULL,
+	description		ore_description NOT NULL,
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE parameter (
+	id			ore_id NOT NULL DEFAULT NEXTVAL('parameter_id_seq'),
+	platform_name		ore_name NOT NULL UNIQUE,
+	display_name		ore_display_name NOT NULL,
+	description		ore_description NOT NULL,
+	defining_level		ore_definition_level NOT NULL,
+	defining_entity		ore_id,	-- REFERENCES whatever_table(id)
+	data_type_id		ore_id REFERENCES data_type(id) NOT NULL,
+	is_array		ore_boolean NOT NULL,
+	value_required		ore_boolean NOT NULL,
+	value_unique		ore_boolean NOT NULL,
+	value_historical	ore_boolean NOT NULL,
 	PRIMARY KEY(id)
 );
 

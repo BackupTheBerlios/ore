@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: drop-ore-indexes.sql,v 1.1 2004/12/21 11:39:58 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: drop-ore-indexes.sql,v 1.2 2004/12/21 12:17:38 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -17,16 +17,13 @@
 -- 
 -- ((autolicense)) 
 DROP INDEX catalog_parent_id_idx;
-DROP INDEX catalog_platform_name_idx;
 
 DROP INDEX account_creation_date_idx;
 DROP INDEX account_deletion_date_idx;
 
 DROP INDEX product_parent_id_idx;
-DROP INDEX product_platform_name_idx;
 
 DROP INDEX service_parent_id_idx;
-DROP INDEX service_platform_name_idx;
 
 DROP INDEX product_subscription_product_id_idx;
 DROP INDEX product_subscription_account_id_idx;
@@ -36,4 +33,7 @@ DROP INDEX product_subscription_termination_date_idx;
 
 DROP INDEX service_subscription_service_id_idx;
 DROP INDEX service_subscription_product_subscription_id_idx;
+
+DROP INDEX parameter_defining_place_idx;
+DROP INDEX parameter_data_type_id_idx;
 
