@@ -9,7 +9,7 @@ The database model for ORE will have to deal with the following kinds of data:
 
 - User/Customer Accounts and related Subscriptions.
 
-- Product/Service/Package/Catalog definitions.
+- Product/Service/Catalog definitions.
 
 - Parameter Definitions and Values.
 
@@ -61,11 +61,14 @@ kinds of informations:
 
 - Additional parameter values as needed for the specific deployment.
 
+- Product and associated Service Subscriptions, representing each service that
+  the Account has subscribed to with the operator.
+
 Each independent field or parameter value may be optional depending on
 specific deployment needs.
 
 
-2.2. Product, Service, Package and Catalog information
+2.2. Product, Service and Catalog information
 
 A Service is the definition of a kind of service that may be provided to a
 customer or user.
@@ -83,8 +86,32 @@ Each root Service defines an Event Type (a definition for the data that
 defines each Service usage) that is inherited and cannot be modified by child
 Services.
 
-Each Service may assign Values for the Parameters that itself defines, or for
-any Parameter inherited from it's parent Service, if any. If a Service doesn't
-define a Value for a Parameter, it inherits the any Value that may be defined
-or inherited by its parent Service, if any.
+In the same fashion, each root Service defines an event guidance procedure
+that will be used in order to find to which Account and Service Subscription
+every incoming event of the matching Event Type will be routed to.
 
+Each Service may assign Values for the Parameters that itself defines, or for
+any Parameter inherited from its parent Service, if any. If a Service doesn't
+define a Value for a Parameter, it inherits any Value that may be defined or
+inherited by its parent Service, if any.
+
+Products are combinations of Services that may be sold as a unit to a
+customer. Services themselves may not be sold. Each Product will group one or
+more Services that will be sold together under a commercial name.
+
+Products may define Parameters and give Values to them too, in the same way as
+Services do.
+
+Products may subclass other products. In this case Parameter and Value
+inheritance applies in the same way as it does for Services. Additionaly, each
+Product that subclasses another Product inherits it's parent Services, and may
+add new Services to the group of Services inherited. However, a child Product
+definition cannot remove any one of the Services inherited from its parent
+Product.
+
+A Catalog is a group of Products that are available to a given class of
+customers. In each one of these groups, each individual Product may be
+mandatory or optional. Mandatory Products are automatically subscribed
+whenever an Account is assigned the containing Catalog. Optional Products may
+be subscribed or terminated by the customer afterwards in any free
+combination.
