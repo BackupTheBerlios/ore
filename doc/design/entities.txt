@@ -2,7 +2,7 @@ Database model and data entities
 
 Juan J. García de Soria
 
-$Id: entities.lyx,v 1.8 2004/12/20 20:53:24 skandalfo 
+$Id: entities.lyx,v 1.9 2004/12/21 12:21:58 skandalfo 
 Exp $
 
 Indice General
@@ -366,13 +366,14 @@ component sub-Values.
 * Parameter ID, the identifier of the Parameter 
   Definition which defines this kind of Values.
 
+* Parent Parameter Value ID, the identifier of the 
+  parent Parameter Value for list or structure Values elements.
+
 * Parameter Value assignment place, a pointer to the 
   entity on which the Parameter has been assigned this ValueThis could be a specific Service or Service 
 Subscription, a specific Product or Product 
-subscription, a specific Account, a pointer to a parent 
-Value for components of structure or list Parameters, 
-or the special cases of Parameter Values pre-defined 
-for every Account.
+subscription, a specific Account, or the special cases 
+of Parameter Values pre-defined for every Account.
   .
 
 * As alternatives, either of:

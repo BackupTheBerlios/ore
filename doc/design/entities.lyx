@@ -1,22 +1,4 @@
 #LyX 1.3 created this file. For more info see http://www.lyx.org/
-# ORE/Open Rating Environment - $Id: entities.lyx,v 1.9 2004/12/21 12:21:58 skandalfo Exp $
-# Copyright (C) 2004 Juan J. Garcia de Soria.
-# 
-# This program is free software; you can redistribute it and/or
-# modify it under the terms of the GNU Lesser General Public
-# License as published by the Free Software Foundation; either
-# version 2.1 of the License, or (at your option) any later version.
-# 
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# Lesser General Public License for more details.
-# 
-# You should have received a copy of the GNU Lesser General Public
-# License along with this library; if not, write to the Free Software
-# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-# 
-# ((autolicense)) 
 \lyxformat 221
 \textclass orebook
 \language english
@@ -51,7 +33,7 @@ Juan J.
  García de Soria
 \layout Date
 
-$Id: entities.lyx,v 1.9 2004/12/21 12:21:58 skandalfo Exp $
+$Id: entities.lyx,v 1.10 2004/12/21 16:11:46 skandalfo Exp $
 \layout Standard
 
 
@@ -630,6 +612,10 @@ Parameter ID, the identifier of the Parameter Definition which defines this
  kind of Values.
 \layout Itemize
 
+Parent Parameter Value ID, the identifier of the parent Parameter Value
+ for list or structure Values elements.
+\layout Itemize
+
 Parameter Value assignment place, a pointer to the entity on which the Parameter
  has been assigned this Value
 \begin_inset Foot
@@ -638,9 +624,8 @@ collapsed false
 \layout Standard
 
 This could be a specific Service or Service Subscription, a specific Product
- or Product subscription, a specific Account, a pointer to a parent Value
- for components of structure or list Parameters, or the special cases of
- Parameter Values pre-defined for every Account.
+ or Product subscription, a specific Account, or the special cases of Parameter
+ Values pre-defined for every Account.
 \end_inset 
 
 .
