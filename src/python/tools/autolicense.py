@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# ORE/Open Rating Environment - $Id: autolicense.py,v 1.1 2004/12/20 19:33:01 skandalfo Exp $
+# ORE/Open Rating Environment - $Id: autolicense.py,v 1.2 2004/12/20 19:34:49 skandalfo Exp $
 # Copyright (C) 2004 Juan J. Garcia de Soria.
 # 
 # This program is free software; you can redistribute it and/or
@@ -22,7 +22,7 @@ import os
 import os.path
 
 license = [
-"ORE/Open Rating Environment - $Id: autolicense.py,v 1.1 2004/12/20 19:33:01 skandalfo Exp $\n",
+"ORE/Open Rating Environment - $" + "Id" + "$\n",
 "Copyright (C) 2004 Juan J. Garcia de Soria.\n",
 "\n",
 "This program is free software; you can redistribute it and/or\n",
