@@ -1,0 +1,23 @@
+<project name="oreja" default="compile" basedir=".">
+    <description>
+        ORE Java Access library
+    </description>
+
+    <!-- Import common definitions-->
+    <import file="../defaults.xml"/>
+
+    <target name="compile" depends="init">
+        <javac srcdir="${java-src}" destdir="${build-dir}"/>
+    </target>
+
+    <target name="run" depends="compile">
+        <java classname="de.berlios.ore.StupidMainClass">
+            <classpath>
+                <pathelement location="${build-dir}"/>
+            </classpath>
+        </java>
+    </target>
+</project>
+
+<!-- vim: set shiftwidth=4 tabstop=4 expandtab: -->
+

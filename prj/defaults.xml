@@ -1,0 +1,17 @@
+<project name="oredefs" default="-do-nothing-oredefs" basedir=".">
+    <description>
+        ORE common definitions ant script
+    </description>
+    <property name="java-src" location="../../src/java"/>
+    <property name="python-src" location="../../src/python"/>
+    <property name="sql-src" location="../../src/sql"/>
+    <property name="build-dir" location="build"/>
+    <target name="-do-nothing-oredefs"/>
+        
+    <target name="init">
+        <mkdir dir="${build-dir}"/>
+    </target>
+</project>
+
+<!-- vim: set shiftwidth=4 tabstop=4 expandtab: -->
+
