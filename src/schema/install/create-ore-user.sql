@@ -1,0 +1,2 @@
+CREATE USER ore WITH PASSWORD 'ore';
+

@@ -1,0 +1,2 @@
+CREATE DATABASE ore WITH OWNER ore;
+
