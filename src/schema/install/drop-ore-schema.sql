@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: drop-ore-schema.sql,v 1.2 2004/12/20 19:55:47 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: drop-ore-schema.sql,v 1.3 2004/12/20 19:56:34 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -16,9 +16,10 @@
 -- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 -- 
 -- ((autolicense)) 
-\c template1 postgres
+\c ore ore
 \i drop-ore-sequences.sql
 \i drop-ore-tables.sql
+\c template1 postgres
 \i drop-ore-database.sql
 \i drop-ore-user.sql
 

@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: create-ore-schema.sql,v 1.2 2004/12/20 19:55:47 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: create-ore-schema.sql,v 1.3 2004/12/20 19:56:34 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -19,6 +19,7 @@
 \c template1 postgres
 \i create-ore-user.sql
 \i create-ore-database.sql
+\c ore ore
 \i create-ore-tables.sql
 \i create-ore-sequences.sql
 
