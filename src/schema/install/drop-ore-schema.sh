@@ -1,5 +1,5 @@
 #!/bin/sh
-# ORE/Open Rating Environment - $Id: drop-ore-schema.sh,v 1.2 2004/12/20 22:58:07 skandalfo Exp $
+# ORE/Open Rating Environment - $Id: drop-ore-schema.sh,v 1.3 2004/12/21 10:17:51 skandalfo Exp $
 # Copyright (C) 2004 Juan J. Garcia de Soria.
 # 
 # This program is free software; you can redistribute it and/or
@@ -17,8 +17,9 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 # 
 # ((autolicense)) 
-psql ore ore -f drop-ore-sequences.sql
+psql ore ore -f drop-ore-indexes.sql
 psql ore ore -f drop-ore-tables.sql
+psql ore ore -f drop-ore-sequences.sql
 psql ore ore -f drop-ore-domains.sql
 psql template1 postgres -f drop-ore-database.sql
 psql template1 postgres -f drop-ore-user.sql

@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: drop-ore-sequences.sql,v 1.3 2004/12/20 22:58:07 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: drop-ore-sequences.sql,v 1.4 2004/12/21 10:17:51 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -18,6 +18,7 @@
 -- ((autolicense)) 
 
 -- Drop sequences...
+DROP SEQUENCE catalog_id_seq;
 DROP SEQUENCE account_id_seq;
 DROP SEQUENCE product_id_seq;
 DROP SEQUENCE service_id_seq;
