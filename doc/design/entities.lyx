@@ -56,21 +56,35 @@ Invoices.
 \layout Itemize
 
 Business procedures:
+\begin_deeper 
 \layout Itemize
 
-Event guidance procedures.
+Event Guidance Procedures.
 \layout Itemize
 
-Event rating procedures.
+Event Rating Procedures.
 \layout Itemize
 
-Subscription modifier procedures.
+Subscription Modifier Procedures.
 \layout Itemize
 
-Billing modifier procedures.
+Billing Modifier Procedures.
+\end_deeper 
 \layout Section
 
 User and Customer Accounts
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+We need to include some figures here in order to illustrate the concepts.
+\end_inset 
+
+
 \layout Standard
 
 An Account will be the entity to represent a single customer or user in
@@ -123,10 +137,28 @@ Product and associated Service Subscriptions, representing each service
 \layout Standard
 
 Each independent field or parameter value may be optional depending on specific
- deployment needs.
+ deployment needs, and may be assigned a default value for the whole platform.
+\layout Standard
+
+Each Account may have a parent Account.
+ In that case, the child Account inherits every parameter value defined
+ in the parent Account, except for the ones overridden or redefined at the
+ child Account level.
 \layout Section
 
 Product, Service and Catalog information
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+We need to include some figures here in order to illustrate the concepts.
+\end_inset 
+
+
 \layout Standard
 
 A Service is the definition of a kind of service that may be provided to
@@ -176,7 +208,7 @@ Products may define Parameters and give Values to them too, in the same
 Products may subclass other products.
  In this case Parameter and Value inheritance applies in the same way as
  it does for Services.
- Additionaly, each Product that subclasses another Product inherits it's
+ Additionally, each Product that subclasses another Product inherits it's
  parent Services, and may add new Services to the group of Services inherited.
  However, a child Product definition cannot remove any one of the Services
  inherited from its parent Product.
@@ -191,4 +223,88 @@ A Catalog is a group of Products that are available to a given class of
  Optional Products may be subscribed or terminated by the customer afterwards
  in any free combination.
  
+\layout Section
+
+Parameter Definitions and Values
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+We need to include some figures here in order to illustrate the concepts.
+\end_inset 
+
+
+\layout Standard
+
+Most of the actual information in ORE related to customers, services and
+ subscriptions is stored in the Values of Parameters defined through the
+ system.
+\layout Standard
+
+There are three kind of Parameters:
+\layout Description
+
+Account\SpecialChar ~
+Parameters: These are Parameters that are Account-related.
+ They model attributes, characteristics or features related to Account objects
+ or customers.
+ An example could be the contact phone number for a customer.
+\layout Description
+
+Product\SpecialChar ~
+Parameters: These are Parameters that are Product- or Product Subscriptio
+n-related.
+ They model attributes, characteristics and features related to the Products
+ that customers may subscribe to, or related to the specific Product Subscriptio
+ns they may have done to these Products.
+ An example could be the end date-time when a given subscription has a minimum
+ contract term
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+it would be the date-time to check against when unsubscribing a product
+ that may impose penalties for being unsubscribed before six months elapse
+ since its subscription, assigned at Product Subscription level.
+ The actual period of six months could be another Product Parameter whose
+ Value is assigned at Product level.
+ The first Parameter Value would be calculated by using the second one by
+ a Subscription Modifier Procedure at subscription time.
+\end_inset 
+
+.
+\layout Description
+
+Service\SpecialChar ~
+Parameters: These are Parameters that are Service- or Service Subscriptio
+n-related.
+ They model attributes, characteristics and features related to the Services
+ that may be provided to customers, or related to the specific Service Subscript
+ions that the customers may have as their rights to receive the Service.
+ An example could be the domain, like 
+\begin_inset Quotes eld
+\end_inset 
+
+mygreatmail.com
+\begin_inset Quotes erd
+\end_inset 
+
+, that is applied to every e-mail Service that customers of a given e-mail
+ provider receive or subscribe
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+the Value would be assigned at Service level, and it would be inherited
+ by every Service Subscription that users get via their Product Subscriptions
+ to Products including the former Service.
+\end_inset 
+
+.
 \the_end
