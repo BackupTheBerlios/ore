@@ -1,0 +1,194 @@
+#LyX 1.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 221
+\textclass orebook
+\language english
+\inputencoding auto
+\fontscheme default
+\graphics default
+\paperfontsize 10
+\spacing single 
+\papersize a4paper
+\paperpackage a4
+\use_geometry 0
+\use_amsmath 0
+\use_natbib 0
+\use_numerical_citations 0
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+
+\layout Title
+
+Database model and data entities
+\layout Author
+
+Juan J.
+ García de Soria
+\layout Chapter
+
+Database model concepts
+\layout Standard
+
+The database model for ORE will have to deal with the following kinds of
+ data:
+\layout Itemize
+
+User/Customer Accounts and related Subscriptions.
+\layout Itemize
+
+Product/Service/Catalog definitions.
+\layout Itemize
+
+Parameter Definitions and Values.
+\layout Itemize
+
+Event Types and Rated Event Records.
+\layout Itemize
+
+Invoices.
+\layout Itemize
+
+Business procedures:
+\layout Itemize
+
+Event guidance procedures.
+\layout Itemize
+
+Event rating procedures.
+\layout Itemize
+
+Subscription modifier procedures.
+\layout Itemize
+
+Billing modifier procedures.
+\layout Section
+
+User and Customer Accounts
+\layout Standard
+
+An Account will be the entity to represent a single customer or user in
+ the service platform.
+ Actually it represents a single billable entity, although it is not a monetary-
+only concept, since it could refer to several currencies at the same time,
+ and will usually contain associated contact data.
+\layout Standard
+
+That said, a single account will typically contain data for the following
+ kinds of informations:
+\layout Itemize
+
+Default, secondary currencies.
+\layout Itemize
+
+Currency balances.
+\layout Itemize
+
+Billing period and date information.
+\layout Itemize
+
+Account status (active/blocked/deleted...).
+\layout Itemize
+
+Commercial model information determining the Products available for the
+ Account.
+\layout Itemize
+
+Contact data, like:
+\layout Itemize
+
+Personal data (Name, surname...).
+\layout Itemize
+
+Address.
+\layout Itemize
+
+Phone number(s).
+\layout Itemize
+
+E-mail address(es).
+\layout Itemize
+
+Additional parameter values as needed for the specific deployment.
+\layout Itemize
+
+Product and associated Service Subscriptions, representing each service
+ that the Account has subscribed to with the operator.
+\layout Standard
+
+Each independent field or parameter value may be optional depending on specific
+ deployment needs.
+\layout Section
+
+Product, Service and Catalog information
+\layout Standard
+
+A Service is the definition of a kind of service that may be provided to
+ a customer or user.
+\layout Standard
+
+A Service definition may define specific Parameters that determine specific
+ characteristics of the Service.
+ For instance, for a basic phone Service, the phone number for the subscriber
+ line would be a Parameter to be defined.
+\layout Standard
+
+Services may be subclassed.
+ Each Service may be a root Service, so that it has no parent Service, or
+ may inherit from exactly one parent Service.
+ When a Service inherits from a parent Service, it inherits all the Parameter
+ defined for its parent, as well as any Parameter inherited by its parent
+ Service.
+\layout Standard
+
+Each root Service defines an Event Type (a definition for the data that
+ defines each Service usage) that is inherited and cannot be modified by
+ child Services.
+\layout Standard
+
+In the same fashion, each root Service defines an event guidance procedure
+ that will be used in order to find to which Account and Service Subscription
+ every incoming event of the matching Event Type will be routed to.
+\layout Standard
+
+Each Service may assign Values for the Parameters that itself defines, or
+ for any Parameter inherited from its parent Service, if any.
+ If a Service doesn't define a Value for a Parameter, it inherits any Value
+ that may be defined or inherited by its parent Service, if any.
+\layout Standard
+
+Products are combinations of Services that may be sold as a unit to a customer.
+ Services themselves may not be sold.
+ Each Product will group one or more Services that will be sold together
+ under a commercial name.
+\layout Standard
+
+Products may define Parameters and give Values to them too, in the same
+ way as Services do.
+\layout Standard
+
+Products may subclass other products.
+ In this case Parameter and Value inheritance applies in the same way as
+ it does for Services.
+ Additionaly, each Product that subclasses another Product inherits it's
+ parent Services, and may add new Services to the group of Services inherited.
+ However, a child Product definition cannot remove any one of the Services
+ inherited from its parent Product.
+\layout Standard
+
+A Catalog is a group of Products that are available to a given class of
+ customers.
+ In each one of these groups, each individual Product may be mandatory or
+ optional.
+ Mandatory Products are automatically subscribed whenever an Account is
+ assigned the containing Catalog.
+ Optional Products may be subscribed or terminated by the customer afterwards
+ in any free combination.
+ 
+\the_end

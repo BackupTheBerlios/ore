@@ -1,0 +1,121 @@
+\NeedsTeXFormat{LaTeX2e}
+\usepackage{graphicx}
+\setlength\parskip{\medskipamount}
+\setlength\parindent{0pt}
+  \if@titlepage
+  \renewcommand\maketitle{\begin{titlepage}%
+  \let\footnotesize\small
+  \let\footnoterule\relax
+  \let \footnote \thanks
+  \null\vfil
+  \vskip 40\p@
+  \begin{center}%
+    %\includegraphics[width=0.3\textwidth]{ore.eps}
+    {\Huge \@title \par}%
+    \vskip 12em%
+  \end{center}\par
+  %\begin{flushleft}%
+      %\vskip 1.5em%
+    %{\large \@date \par}%       % Set date in \large size.
+  %\end{flushleft}
+  \begin{flushright}%
+    {\large
+     \lineskip .75em%
+      \begin{tabular}[t]{@{} r @{}}%
+        \@author
+      \end{tabular}\par}%
+  \end{flushright}
+  \begin{center}%
+    \setlength{\unitlength}{0.01\textwidth}
+    \begin{picture}(100,7)
+    	\linethickness{3mm}
+	\put(0,6){\line(1,0){100}}
+    	\linethickness{2mm}
+	\put(10,3){\line(1,0){90}}
+    	\linethickness{1mm}
+	\put(20,1){\line(1,0){80}}
+    \end{picture}\par
+  \end{center}\par
+  \begin{flushright}%
+    \begin{tabular}[t]{@{} r c @{}}
+    \raisebox{4em}{\parbox{0.6\textwidth}{
+    \begin{flushright}%
+    {\Huge ORE}\par%
+    {\Large Open Rating Environment}
+    \end{flushright}
+    }}
+    & 
+    \includegraphics[width=0.2\textwidth]{../logo/ore.eps} \\ 
+    \end{tabular}
+  \end{flushright}\par
+  \@thanks
+  \vfil\null
+  \end{titlepage}%
+  \setcounter{footnote}{0}%
+  \global\let\thanks\relax
+  \global\let\maketitle\relax
+  \global\let\@thanks\@empty
+  \global\let\@author\@empty
+  \global\let\@date\@empty
+  \global\let\@title\@empty
+  \global\let\title\relax
+  \global\let\author\relax
+  \global\let\date\relax
+  \global\let\and\relax
+}
+\else
+\renewcommand\maketitle{\par
+  \begingroup
+    \renewcommand\thefootnote{\@fnsymbol\c@footnote}%
+    \def\@makefnmark{\rlap{\@textsuperscript{\normalfont\@thefnmark}}}%
+    \long\def\@makefntext##1{\parindent 1em\noindent
+            \hb@xt@1.8em{%
+                \hss\@textsuperscript{\normalfont\@thefnmark}}##1}%
+    \if@twocolumn
+      \ifnum \col@number=\@ne
+        \@maketitle
+      \else
+        \twocolumn[\@maketitle]%
+      \fi
+    \else
+      \newpage
+      \global\@topnum\z@   % Prevents figures from going at top of page.
+      \@maketitle
+    \fi
+    \thispagestyle{plain}\@thanks
+  \endgroup
+  \setcounter{footnote}{0}%
+  \global\let\thanks\relax
+  \global\let\maketitle\relax
+  \global\let\@maketitle\relax
+  \global\let\@thanks\@empty
+  \global\let\@author\@empty
+  \global\let\@date\@empty
+  \global\let\@title\@empty
+  \global\let\title\relax
+  \global\let\author\relax
+  \global\let\date\relax
+  \global\let\and\relax
+}
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 2em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\LARGE \@title \par}%
+    \vskip 1.5em%
+    {\large
+      \lineskip .5em%
+      \begin{tabular}[t]{c}%
+        \@author
+      \end{tabular}\par}%
+    \vskip 1em%
+    {\large \@date}%
+  \end{center}%
+  \par
+  \vskip 1.5em}
+\fi
+\endinput
+%%
+%% End of file `book.cls'.
