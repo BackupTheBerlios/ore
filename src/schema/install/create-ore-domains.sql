@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: create-ore-domains.sql,v 1.1 2004/12/20 22:58:07 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: create-ore-domains.sql,v 1.2 2004/12/21 11:39:58 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -16,8 +16,36 @@
 -- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 -- 
 -- ((autolicense)) 
+
+-- Type aliasing domains.
 CREATE DOMAIN ore_id BIGINT;
 CREATE DOMAIN ore_timestamp TIMESTAMP WITH TIME ZONE;
 CREATE DOMAIN ore_name VARCHAR(32);
 CREATE DOMAIN ore_display_name TEXT;
 CREATE DOMAIN ore_description TEXT;
+
+-- Enumeration domains.
+CREATE DOMAIN ore_definition_level INTEGER CHECK (
+	VALUE IN (
+		10,	-- All Accounts level.
+		20,	-- All Services level.
+		21,	-- Specific Service level.
+		30,	-- All Products level.
+		31,	-- Specific Product level.
+		41	-- Specific Structure Type level.
+	)
+);
+
+CREATE DOMAIN ore_assignment_level INTEGER CHECK (
+	VALUE IN (
+		10,	-- All Accounts level.
+		11,	-- Specific Account level.
+		20,	-- All Services level.
+		21,	-- Specific Service level.
+		22,	-- Specific Service Subscription level.
+		30,	-- All Products level.
+		31,	-- Specific Product level.
+		32,	-- Specific Product Subscription level.
+		41	-- Specific Structure Type level.
+	)
+);

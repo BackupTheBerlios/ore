@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: create-ore-tables.sql,v 1.5 2004/12/21 10:17:51 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: create-ore-tables.sql,v 1.6 2004/12/21 11:39:58 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -20,7 +20,7 @@
 CREATE TABLE catalog (
 	id			ore_id NOT NULL DEFAULT NEXTVAL('catalog_id_seq'),
 	parent_id		ore_id REFERENCES catalog(id),
-	platform_name		ore_name NOT NULL,
+	platform_name		ore_name NOT NULL UNIQUE,
 	display_name		ore_display_name NOT NULL,
 	description		ore_description NOT NULL,
 	availability_date	ore_timestamp,
@@ -30,6 +30,7 @@ CREATE TABLE catalog (
 
 CREATE TABLE account (
 	id			ore_id NOT NULL DEFAULT NEXTVAL('account_id_seq'),
+	parent_id		ore_id REFERENCES account(id),
 	creation_date		ore_timestamp NOT NULL,
 	deletion_date		ore_timestamp,
 	catalog_id		ore_id,
@@ -39,7 +40,7 @@ CREATE TABLE account (
 CREATE TABLE product (
 	id			ore_id NOT NULL DEFAULT NEXTVAL('product_id_seq'),
 	parent_id		ore_id REFERENCES product(id),
-	platform_name		ore_name NOT NULL,
+	platform_name		ore_name NOT NULL UNIQUE,
 	display_name		ore_display_name NOT NULL,
 	description		ore_description NOT NULL,
 	availability_date	ore_timestamp,
@@ -50,7 +51,7 @@ CREATE TABLE product (
 CREATE TABLE service (
 	id			ore_id NOT NULL DEFAULT NEXTVAL('service_id_seq'),
 	parent_id		ore_id REFERENCES service(id),
-	platform_name		ore_name NOT NULL,
+	platform_name		ore_name NOT NULL UNIQUE,
 	display_name		ore_display_name NOT NULL,
 	description		ore_description NOT NULL,
 	availability_date	ore_timestamp,
