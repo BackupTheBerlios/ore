@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: create-ore-sequences.sql,v 1.1 2004/12/20 19:55:47 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: create-ore-sequences.sql,v 1.2 2004/12/20 20:41:28 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -16,5 +16,13 @@
 -- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 -- 
 -- ((autolicense)) 
-CREATE SEQUENCE account_id_seq;
 
+-- Sequences.
+CREATE SEQUENCE account_id_seq;
+CREATE SEQUENCE product_id_seq;
+CREATE SEQUENCE service_id_seq;
+CREATE SEQUENCE type_id_seq;
+CREATE SEQUENCE parameter_id_seq;
+CREATE SEQUENCE product_subscription_id_seq;
+CREATE SEQUENCE service_subscription_id_seq;
+CREATE SEQUENCE parameter_value_id_seq;

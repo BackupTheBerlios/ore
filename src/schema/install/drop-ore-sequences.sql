@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: drop-ore-sequences.sql,v 1.1 2004/12/20 19:55:47 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: drop-ore-sequences.sql,v 1.2 2004/12/20 20:41:28 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -16,5 +16,13 @@
 -- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 -- 
 -- ((autolicense)) 
-DROP SEQUENCE account_id_seq;
 
+-- Drop sequences...
+DROP SEQUENCE account_id_seq;
+DROP SEQUENCE product_id_seq;
+DROP SEQUENCE service_id_seq;
+DROP SEQUENCE type_id_seq;
+DROP SEQUENCE parameter_id_seq;
+DROP SEQUENCE product_subscription_id_seq;
+DROP SEQUENCE service_subscription_id_seq;
+DROP SEQUENCE parameter_value_id_seq;
