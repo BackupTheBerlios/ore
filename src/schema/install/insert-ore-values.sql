@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: insert-ore-values.sql,v 1.1 2004/12/21 12:17:38 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: insert-ore-values.sql,v 1.2 2004/12/21 16:12:02 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -18,7 +18,7 @@
 -- ((autolicense)) 
 
 INSERT INTO data_type (id, platform_name, display_name, description)
-	VALUES (-1, 'integer', 'Integer', 'An integer numeric value.');
+	VALUES (-1, 'int', 'Integer', 'An integer numeric value.');
 
 INSERT INTO data_type (id, platform_name, display_name, description)
 	VALUES (-2, 'double', 'Double', 'A double-precision floating point value.');
@@ -33,4 +33,4 @@ INSERT INTO data_type (id, platform_name, display_name, description)
 	VALUES (-5, 'boolean', 'Boolean', 'A boolean value, 0 for false, 1 for true.');
 
 INSERT INTO data_type (id, platform_name, display_name, description)
-	VALUES (-6, 'datetime', 'Date-Time', 'A millisecond-precision, UTC-relative timestamp value.');
+	VALUES (-6, 'timestamp', 'Date-Time', 'A millisecond-precision, UTC-relative timestamp value.');

@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: drop-ore-domains.sql,v 1.3 2004/12/21 12:17:38 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: drop-ore-domains.sql,v 1.4 2004/12/21 16:12:02 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -24,7 +24,7 @@ DROP DOMAIN ore_name;
 DROP DOMAIN ore_display_name;
 DROP DOMAIN ore_description;
 DROP DOMAIN ore_boolean;
-
+DROP DOMAIN ore_int;
 -- Enumeration domains.
 DROP DOMAIN ore_definition_level;
 DROP DOMAIN ore_assignment_level;

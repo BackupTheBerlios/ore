@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: drop-ore-indexes.sql,v 1.2 2004/12/21 12:17:38 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: drop-ore-indexes.sql,v 1.3 2004/12/21 16:12:02 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -36,4 +36,9 @@ DROP INDEX service_subscription_product_subscription_id_idx;
 
 DROP INDEX parameter_defining_place_idx;
 DROP INDEX parameter_data_type_id_idx;
+
+DROP INDEX parameter_value_assigning_place_idx;
+DROP INDEX parameter_value_parameter_id_idx;
+DROP INDEX parameter_value_initial_date_idx;
+DROP INDEX parameter_value_parent_parameter_value_id_idx;
 

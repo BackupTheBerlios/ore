@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: drop-ore-tables.sql,v 1.5 2004/12/21 12:17:38 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: drop-ore-tables.sql,v 1.6 2004/12/21 16:12:02 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -16,6 +16,7 @@
 -- Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 -- 
 -- ((autolicense)) 
+DROP TABLE parameter_value;
 DROP TABLE parameter;
 DROP TABLE data_type;
 DROP TABLE service_subscription;
