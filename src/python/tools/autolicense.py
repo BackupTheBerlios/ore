@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# ORE/Open Rating Environment - $Id: autolicense.py,v 1.2 2004/12/20 19:34:49 skandalfo Exp $
+# ORE/Open Rating Environment - $Id: autolicense.py,v 1.3 2004/12/20 19:41:38 skandalfo Exp $
 # Copyright (C) 2004 Juan J. Garcia de Soria.
 # 
 # This program is free software; you can redistribute it and/or
@@ -42,11 +42,15 @@ license = [
 ]
 
 preComment = {
-	".c": "/*"
+	".c": "/*",
+	".cpp": "/*",
+	".java": "/*"
 }
 
 postComment = {
-	".c": "*/"
+	".c": "*/",
+	".cpp": "*/",
+	".java": "*/"
 }
 
 ignoreComment = {
@@ -57,8 +61,6 @@ ignoreComment = {
 lineComment = {
 	".sql": "-- ",
 	".py": "# ",
-	".cpp": "// ",
-	".java": "// ",
 	".sh": "# "
 }
 
