@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: create-ore-tables.sql,v 1.8 2004/12/21 16:12:02 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: create-ore-tables.sql,v 1.9 2004/12/22 21:33:22 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -46,6 +46,12 @@ CREATE TABLE product (
 	availability_date	ore_timestamp,
 	retirement_date		ore_timestamp,
 	PRIMARY KEY(id)
+);
+
+CREATE TABLE catalog_has_product (
+	catalog_id		ore_id REFERENCES catalog(id),
+	product_id		ore_id REFERENCES product(id),
+	PRIMARY KEY(catalog_id, product_id)
 );
 
 CREATE TABLE service (
@@ -105,6 +111,7 @@ CREATE TABLE parameter (
 );
 
 CREATE TABLE parameter_value (
+	-- Value identification:
 	id				ore_id NOT NULL DEFAULT NEXTVAL('parameter_value_id_seq'),
 	assigning_level			ore_assignment_level NOT NULL,
 	assigning_entity		ore_id,	-- REFERENCES whatever_table(id)
@@ -112,6 +119,7 @@ CREATE TABLE parameter_value (
 	initial_date			ore_timestamp NOT NULL,
 	list_index			ore_int NOT NULL,
 	parent_parameter_value_id	ore_id REFERENCES parameter_value(id),
+	-- Actual values:
 	id_value			ore_id,
 	int_value			ore_int,
 	double_value			ore_double,
@@ -119,6 +127,9 @@ CREATE TABLE parameter_value (
 	boolean_value			ore_boolean,
 	string_value			ore_string,
 	timestamp_value			ore_timestamp,
+	-- References:
+	target_level			ore_reference_level NOT NULL,
+	target_parameter_id		ore_id REFERENCES parameter(id),
 	PRIMARY KEY(id),
 	UNIQUE(assigning_level, assigning_entity, parameter_id, list_index, initial_date)
 );

@@ -1,4 +1,4 @@
--- ORE/Open Rating Environment - $Id: create-ore-domains.sql,v 1.4 2004/12/21 16:12:02 skandalfo Exp $
+-- ORE/Open Rating Environment - $Id: create-ore-domains.sql,v 1.5 2004/12/22 21:33:22 skandalfo Exp $
 -- Copyright (C) 2004 Juan J. Garcia de Soria.
 -- 
 -- This program is free software; you can redistribute it and/or
@@ -34,10 +34,10 @@ CREATE DOMAIN ore_string TEXT;
 CREATE DOMAIN ore_definition_level INTEGER CHECK (
 	VALUE IN (
 		10,	-- All Accounts level.
-		20,	-- All Services level.
-		21,	-- Specific Service level.
-		30,	-- All Products level.
-		31,	-- Specific Product level.
+		20,	-- All Products level.
+		21,	-- Specific Product level.
+		30,	-- All Services level.
+		31,	-- Specific Service level.
 		41	-- Specific Structure Type level.
 	)
 );
@@ -46,12 +46,22 @@ CREATE DOMAIN ore_assignment_level INTEGER CHECK (
 	VALUE IN (
 		10,	-- All Accounts level.
 		11,	-- Specific Account level.
-		20,	-- All Services level.
-		21,	-- Specific Service level.
-		22,	-- Specific Service Subscription level.
-		30,	-- All Products level.
-		31,	-- Specific Product level.
-		32,	-- Specific Product Subscription level.
+		20,	-- All Products level.
+		21,	-- Specific Product level.
+		22,	-- Specific Product Subscription level.
+		30,	-- All Services level.
+		31,	-- Specific Service level.
+		32,	-- Specific Service Subscription level.
 		41	-- Specific Structure Type level.
 	)
 );
+
+CREATE DOMAIN ore_reference_level INTEGER CHECK (
+	VALUE IN (
+		 0,	-- Not a reference.
+		10,	-- Account level reference target.
+		20,	-- Product level reference target.
+		30	-- Service level reference target.
+	)
+);
+
